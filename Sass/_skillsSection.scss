@@ -1,0 +1,40 @@
+
+@import "./variables";
+
+
+
+
+.skills-section {
+    max-height: 400px;
+    max-width:1440px;
+    background-color: $Skills-section-main-clr;
+    display: grid;
+    place-items: center;
+    text-align: center;
+
+    .section-title {
+        @include reuseableTittle();
+
+    }
+
+    .icon-section {
+        margin-top: 3em;
+       display: flex;
+       flex-wrap: wrap;
+       column-gap:  30px;
+       min-width: 375px;
+       max-width: 1216px;
+       justify-content: center;
+    }
+
+    p {
+        color:  $skill-title-txt-clr;
+        font-size: 20px;
+    }
+
+    img {
+        width: 100px;
+    }
+   
+
+}

@@ -1,0 +1,129 @@
+
+
+$table: 768px;
+
+@mixin Tablet {
+    @media ( min-width: #{$table}) {
+            @content;
+    }
+}
+
+
+
+
+
+.project-section {
+    background-color: $whiteClr;
+    min-height: 1440px;
+    max-width: 375px;
+    min-width: 1440px;
+    // display: flex;
+    // justify-content: center;
+    // justify-items: center;
+    // align-items: center;
+    // flex-direction: column;
+    display: grid;
+    place-items: center;
+
+    
+
+
+    .projects {
+        margin: 15px 0;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+        @include Tablet {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .flip-info {
+        order: 1;
+    }
+    .flip-img {
+        order: 2;
+        background-color: $Project-box-img;
+    }
+
+
+    .section-title {
+        @include reuseableTittle();
+    }
+
+
+    p {
+        color: $skill-title-txt-clr;
+        font-size: 18px;
+        text-align: start;
+    }
+
+ .project-img {
+    @include ProjecImgBox();
+
+    @include Tablet {
+        height: 480px;
+        width: 576px;
+    }
+ }
+    .project-img img {
+        width: 279px;
+        height: 192px;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+
+    .project-info {
+        max-height: 528px;
+        max-width: 343px;
+        padding: 10px;
+    }
+
+    .tools {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    
+    .tools p {
+        @include reuseableTittle()
+    }
+
+   
+    ul {
+        display: flex;
+        column-gap: 15px;
+        align-items: center;
+    }
+    li {
+        list-style-type: none;
+    }
+    
+    
+    a {
+        text-decoration: none;
+        cursor: pointer;
+        color: $skill-title-txt-clr;
+    }
+
+    a img {
+        margin-bottom: -10px;
+        height: 35px;
+        padding-left: 3px;
+    
+    }
+
+    h5 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: $project-title-clr;
+    }
+
+}
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+$skill-title-Clr: #E5E7EB;
+$skill-title-txt-clr: #4B5563;
+$Skills-section-main-clr: #FFFFFF;
+$whiteClr: #FFFFFF;
+$Project-box-img: #F9FAFB;
+$project-title-clr: #111827;
+
+
+@mixin reuseableTittle {
+    background-color: $skill-title-Clr;
+    border-radius: 5rem;
+    max-width: fit-content;
+    padding: 6px 25px;
+    color: $skill-title-txt-clr;
+    font-size: 14px;
+}
+
+@mixin ProjecImgBox {
+    min-height: 256px;
+    min-width: 343px;
+    display: grid;
+    place-items: center;
+    background-color: $Project-box-img;
+    border-radius: 5px;
+}
