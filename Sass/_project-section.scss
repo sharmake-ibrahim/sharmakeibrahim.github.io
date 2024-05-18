@@ -60,11 +60,6 @@ $table: 768px;
 
  .project-img {
     @include ProjecImgBox();
-
-    @include Tablet {
-        height: 480px;
-        width: 576px;
-    }
  }
     .project-img img {
         width: 279px;

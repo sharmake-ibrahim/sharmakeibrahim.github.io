@@ -80,12 +80,6 @@
   background-color: #F9FAFB;
   border-radius: 5px;
 }
-@media (min-width: 768px) {
-  .project-section .project-img {
-    height: 480px;
-    width: 576px;
-  }
-}
 .project-section .project-img img {
   width: 279px;
   height: 192px;
@@ -135,4 +129,220 @@
   font-size: 1.2rem;
   font-weight: bold;
   color: #111827;
+}
+
+.container {
+  max-width: 107rem;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+}
+@media (min-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+.hero-section {
+  background-color: #FFFFFF;
+  padding: 0 0;
+}
+@media (min-width: 768px) {
+  .hero-section {
+    padding: 1em 0;
+  }
+}
+.hero-section .split {
+  display: grid;
+  max-width: 1280px;
+  grid-template-columns: 100%;
+  place-items: center;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .hero-section .split {
+    align-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 2fr));
+    grid-template-areas: "info  img";
+  }
+}
+.hero-section .split img {
+  max-width: 100%;
+  max-height: 300px;
+  max-width: 320px;
+}
+@media (min-width: 768px) {
+  .hero-section .split img {
+    max-width: 280px;
+  }
+}
+@media (min-width: 768px) {
+  .hero-section .split .hero-info {
+    grid-area: info;
+  }
+}
+.hero-section .split .hero-info h1 {
+  color: #111827;
+  font-weight: bold;
+  font-size: clamp(36px, 4vw, 60px);
+}
+.hero-section .split .narrow-txt {
+  margin-top: -1.3em;
+  max-width: 20rem;
+}
+.hero-section .split .narrow-txt p {
+  font-size: 16px;
+  line-height: 1.3;
+  color: #4B5563;
+}
+.hero-section .split .hero-img {
+  margin-top: 2em;
+}
+@media (min-width: 768px) {
+  .hero-section .split .hero-img {
+    grid-area: img;
+  }
+}
+.hero-section .tech-stack {
+  margin-top: 1em;
+  padding: 1em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+@media (min-width: 768px) {
+  .hero-section .tech-stack {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+.hero-section .tech-stack img {
+  max-width: 100%;
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hero-section .tech-stack p {
+  color: #4B5563;
+  border-bottom: 2px solid #4B5563;
+}
+@media (min-width: 768px) {
+  .hero-section .tech-stack p {
+    border-bottom: 0;
+    padding-right: 15px;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding-bottom: 3px;
+    border-right: 2px solid #4B5563;
+  }
+}
+@media (min-width: 768px) {
+  .hero-section .tech-stack .languages {
+    display: grid;
+    margin-left: 2em;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    place-items: center;
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+header .show {
+  display: block;
+}
+header .header-content {
+  background-color: #FFFFFF;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+header .header-content .title {
+  color: #111827;
+  font-size: 30px;
+  font-weight: bold;
+}
+header .container {
+  max-width: 107rem;
+  margin: 0 auto;
+  padding: 0 6rem;
+}
+@media (max-width: 768px) {
+  header .container {
+    padding: 0 2em;
+  }
+}
+header nav {
+  max-height: 100px;
+  max-width: 600px;
+  display: flex;
+  color: #4B5563;
+  justify-content: space-between;
+  align-items: center;
+}
+header ul {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+@media (max-width: 768px) {
+  header ul {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+  }
+}
+header li {
+  list-style-type: none;
+}
+header a {
+  color: #4B5563;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+}
+.menu-container .open-menu {
+  display: none;
+  cursor: pointer;
+}
+.menu-container .hidden {
+  display: none;
+}
+.menu-container .close-menu {
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .menu-container .close-menu {
+    display: block;
+  }
+}
+
+.them {
+  border-left-width: 5px;
+  border-width: 1px;
+  display: flex;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+.them .dark-mode {
+  display: none;
+}
+.them p {
+  display: none;
+}
+@media (max-width: 768px) {
+  .them p {
+    display: block;
+  }
 }/*# sourceMappingURL=style.css.map */

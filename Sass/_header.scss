@@ -1,0 +1,138 @@
+
+
+$tablet-view: 768px;
+
+@mixin Tablet-screen {
+    @media (max-width: #{$tablet-view}) {
+        @content;
+    }
+}
+header {
+    // max-height: 100px;
+    // min-width: 100%;
+    // background-color: $whiteClr;
+    // display: flex;
+    // justify-content: space-between;
+
+    .show {
+        display: block;
+    }
+
+    .header-content {
+        background-color: $whiteClr;
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+
+        .title {
+            color: $project-title-clr;
+            font-size: 30px;
+            font-weight: bold;
+        }
+    }
+
+
+
+    .container {
+        max-width: 107rem;
+        margin: 0 auto;
+        padding: 0 6rem;
+
+        @include Tablet-screen() {
+            padding: 0 2em;
+        }
+     
+    }
+
+    nav  {
+        max-height: 100px;
+        max-width: 600px;
+        display: flex;
+        color: $skill-title-txt-clr;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        @include Tablet-screen() {
+            display: none;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            right: 0;
+        }
+    }
+
+    li {
+        list-style-type: none;
+    }
+    a {
+        color: $skill-title-txt-clr;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+
+}
+
+
+.menu-container {
+    display: flex;
+    align-items: center;
+   
+
+    .open-menu {
+        display: none;
+        cursor: pointer;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+
+
+    .close-menu {
+        display: none;
+        cursor: pointer;
+        @include Tablet-screen() {
+            display: block;
+        }
+    }
+}
+
+
+.them {
+    // border-left: 1px solid $skill-title-txt-clr;
+    border-left-width: 5px;
+    border-width: 1px;
+    // margin-left: 20px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    column-gap: 8px;
+
+   
+    .dark-mode {
+        display: none;
+    }
+
+    p {
+        display: none;
+        @include Tablet-screen() {
+            display: block;
+        }
+    
+        
+    };
+
+
+ 
+
+}
+
+
+
