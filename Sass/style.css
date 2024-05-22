@@ -1,3 +1,58 @@
+.contact-section {
+  background-color: #FFFFFF;
+  min-width: 100%;
+  padding: 3em 0;
+  max-height: 588px;
+}
+.contact-section .container {
+  max-width: 107rem;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+}
+@media (min-width: 768px) {
+  .contact-section .container {
+    padding: 0 2rem;
+  }
+}
+
+.contact-content {
+  text-align: center;
+  display: grid;
+  place-items: center;
+}
+.contact-content .content-title {
+  background-color: #E5E7EB;
+  border-radius: 5rem;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  padding: 6px 25px;
+  color: #4B5563;
+  font-size: 14px;
+}
+.contact-content .narrow-txt {
+  max-width: 578px;
+}
+.contact-content p {
+  color: #4B5563;
+  font-size: 20px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+}
+.contact-info h1 {
+  color: #111827;
+  font-size: clamp(18px, 2vw, 36px);
+}
+.contact-info img {
+  height: 32px;
+  width: 32px;
+}
+
 .skills-section {
   max-height: 400px;
   max-width: 1440px;

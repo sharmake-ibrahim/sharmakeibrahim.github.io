@@ -8,37 +8,39 @@ const Toggle = ()=> {
 
     openMenu.classList.add('hidden');
 
-        menuContainer.addEventListener( "click", ()=> {
+        menuContainer.addEventListener( "click", ()=>  {
             Ul.classList.toggle('show');
             // console.log('menu clicked');
-            // closeMenu.style.display= "none";
-            // openMenu.style.display= "block";
+            
 
-        //     openMenu.addEventListener('click', ()=> {
-        //         Ul.classList.toggle('show');
-        //         closeMenu.style.display= "block";
-        //         openMenu.style.display= "block";
-        //     })
-        // })
-
-        closeMenu.addEventListener("click", () => {
-            Ul.classList.add('show');   // Show the ul
-            Ul.style.display = 'block'; // Ensure ul is visible
-            closeMenu.classList.add('hidden'); // Hide closeMenu
-            openMenu.classList.remove('hidden'); // Show openMenu
-        });
-    
-        openMenu.addEventListener("click", () => {
-            Ul.classList.remove('show'); // Hide the ul
-            Ul.style.display = 'none';   // Ensure ul is hidden
-            closeMenu.classList.remove('hidden'); // Show closeMenu
-            openMenu.classList.add('hidden'); // Hide openMenu
-        });
-
-        }
-
-
-
-)}
+ })}
 
 Toggle();
+
+
+
+
+
+const CopyAndPaste = () => {
+
+    
+    const copyBtn = document.querySelector('.copyBtn')
+        
+        copyBtn.addEventListener( "click", async ()=> {
+            try {
+                const content = document.querySelector('.contact-info h1').textContent;
+                await navigator.clipboard.writeText(content);
+                 
+                const copiedTxt = await navigator.clipboard.readText();
+                console.log(copiedTxt)
+                
+            } catch (error) {
+                console.log(error);
+                alert(" In order to copy text fromt his website click permission allowed, there your go");
+            }
+        });
+
+    
+}
+
+CopyAndPaste()

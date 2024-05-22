@@ -1,0 +1,74 @@
+$tablet-size: 768px;
+
+@mixin Tablet-view {
+    @media (min-width: #{$tablet-size}) {
+        @content;
+    }
+}
+
+.contact-section {
+    background-color: $whiteClr;
+    min-width: 100%;
+    padding: 3em 0;
+    max-height: 588px;
+   
+
+    .container {
+        max-width: 107rem;
+        margin: 0 auto;
+        padding: 0 0.5rem;
+
+        @include Tablet-view() {
+            padding:  0 2rem;
+        }
+    }
+}
+
+
+
+
+.contact-content {
+    text-align: center;
+    display: grid;
+    place-items: center;
+
+    .content-title {
+        @include reuseableTittle();
+    }
+
+
+    .narrow-txt {
+        max-width: 578px;
+}
+
+p {
+    color: $skill-title-txt-clr;
+    font-size: 20px;
+}
+
+}
+
+
+
+
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+
+
+    h1 {
+        color: $project-title-clr;
+        font-size: clamp( 18px, 2vw, 36px);
+    }
+
+
+
+    img {
+        height: 32px;
+        width: 32px;
+    }
+
+}
