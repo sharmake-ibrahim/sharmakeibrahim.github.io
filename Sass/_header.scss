@@ -58,9 +58,13 @@ header {
         align-items: center;
         column-gap: 20px;
         @include Tablet-screen() {
+            height: 190px;
+            padding-top: 15px; 
             display: none;
             position: absolute;
-            top: 80px;
+            background-color: $whiteClr;
+            max-width: 100%;
+            top: 65px;
             left: 0;
             right: 0;
         }
@@ -68,6 +72,9 @@ header {
 
     li {
         list-style-type: none;
+        @include Tablet-screen() {
+            padding: 5px 0;
+        }
     }
     a {
         color: $skill-title-txt-clr;

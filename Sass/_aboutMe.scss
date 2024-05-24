@@ -1,0 +1,88 @@
+$tablet-size: 768px;
+
+@mixin Tablet-view {
+    @media (min-width: #{$tablet-size}) {
+        @content;
+    }
+}
+
+
+.container {
+    max-width: 107rem;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+
+    @include Tablet-view() {
+        padding:  0 2rem;
+    }
+
+}
+
+    .about-me-content {
+        display: grid;
+        padding: 20px 0;
+        place-items: center;
+
+
+        
+    .title {
+        @include reuseableTittle();
+    }
+
+    .split {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding: 2rem 0;
+        row-gap: 1em;
+
+        @include Tablet-view() {
+         
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        img {
+            max-height: 400px;
+            max-width: 500px;
+        }
+    }
+
+ .space-text {
+        row-gap: 15px;
+        font-size: 16px;
+        line-height: 1.2;
+        color: $skill-title-txt-clr;
+        text-align: center;
+        @include Tablet-view() {
+            text-align: left;
+        }
+
+    }
+
+
+    article {
+        max-height: 400px;
+        max-width: 500px;
+        text-align: center;
+        @include Tablet-view() {
+            text-align: left;
+        }
+
+        h1 {
+            color: $project-title-clr;
+            font-size: minmax(24px, 30px);
+        }
+    }
+
+    }
+
+.about-me{
+    max-width: 107rem;
+    min-width: 375px;
+    max-height: 100%;
+    background-color: $Project-box-img;
+}
+

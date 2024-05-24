@@ -36,7 +36,7 @@ const CopyAndPaste = () => {
                 
             } catch (error) {
                 console.log(error);
-                alert(" In order to copy text fromt his website click permission allowed, there your go");
+                
             }
         });
 

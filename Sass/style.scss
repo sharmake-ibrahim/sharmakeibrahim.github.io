@@ -1,7 +1,13 @@
 @import "./variables";
+@import "./aboutMe";
 @import "./contactSection";
 @import "./skillsSection";
 @import "./project-section";
 @import "./hero-section";
 @import "./header";
 
+
+.main-container {
+    min-height: 100vh;
+    min-width: 100%;
+}
