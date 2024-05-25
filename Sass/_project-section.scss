@@ -1,124 +1,132 @@
+$tablet-size: 768px;
 
-
-$table: 768px;
-
-@mixin Tablet {
-    @media ( min-width: #{$table}) {
-            @content;
+@mixin Tablet-view {
+    @media (min-width: #{$tablet-size}) {
+        @content;
     }
 }
 
 
+.container {
+    max-width: 107rem;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+
+    @include Tablet-view() {
+        padding:  0 2rem;
+    }
+}
 
 
 
 .project-section {
+    min-height: 100vh;
+    min-width: 100%;
     background-color: $whiteClr;
-    min-height: 1440px;
-    max-width: 375px;
-    min-width: 1440px;
-    // display: flex;
-    // justify-content: center;
-    // justify-items: center;
-    // align-items: center;
-    // flex-direction: column;
+}
+
+
+.project-content {
+    text-align: center;
     display: grid;
     place-items: center;
-
     
 
-
-    .projects {
-        margin: 15px 0;
-        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-
-        @include Tablet {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-        }
+    .title {
+        @include reuseableTittle ();
     }
-
-    .flip-info {
-        order: 1;
-    }
-    .flip-img {
-        order: 2;
-        background-color: $Project-box-img;
-    }
-
-
-    .section-title {
-        @include reuseableTittle();
-    }
-
 
     p {
         color: $skill-title-txt-clr;
         font-size: 18px;
-        text-align: start;
     }
 
- .project-img {
-    @include ProjecImgBox();
- }
-    .project-img img {
-        width: 279px;
-        height: 192px;
-        border-radius: 5px;
-        object-fit: cover;
-    }
 
-    .project-info {
-        max-height: 528px;
+    .project {
+        max-height: 784px;
         max-width: 343px;
-        padding: 10px;
+        text-align: start;
+        display: flex;
+        border-radius: 5px;
+        justify-content: center;
+        flex-direction: column;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        
+        .project-img {
+            // max-width: 100%;
+            min-height: 256px;
+            max-width: 343px;
+
+        }
+
+        .info {
+            padding: 0 1rem;
+            min-height: 315px;
+
+          
+        
+        }
+
+        h3 {
+            color: $project-title-clr;
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 16px;
+        }
     }
 
-    .tools {
+    .languages {
         display: flex;
-        justify-content: space-evenly;
+        flex-direction: row;
         flex-wrap: wrap;
-    }
+        gap: 15px;
 
+
+        span {
+            @include reuseableTittle;
+        }
+    }
     
-    .tools p {
-        @include reuseableTittle()
-    }
-
-   
-    ul {
+    .my-projects {
         display: flex;
+        justify-content: center;
+        flex-direction: column;
+        row-gap: 2rem;
+    }
+
+
+    .resources {
+        display: flex;
+        justify-content: start;
+        align-content: center;
+        padding: 0 5px;
         column-gap: 15px;
-        align-items: center;
-    }
-    li {
-        list-style-type: none;
-    }
-    
-    
-    a {
-        text-decoration: none;
-        cursor: pointer;
-        color: $skill-title-txt-clr;
+        img {
+            height: 30px;
+            width: 30px;
+
+          
+        }
+
+        a {
+            color: $skill-title-txt-clr;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            column-gap: 13px;
+            
+            &:hover {
+                color: $project-title-clr;
+            }
+        }
+
+        
+
+
     }
 
-    a img {
-        margin-bottom: -10px;
-        height: 35px;
-        padding-left: 3px;
-    
-    }
 
-    h5 {
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: $project-title-clr;
-    }
 
 }
-
-
-
-
-
-
