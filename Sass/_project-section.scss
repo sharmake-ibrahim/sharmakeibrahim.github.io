@@ -22,6 +22,7 @@ $tablet-size: 768px;
 .project-section {
     min-height: 100vh;
     min-width: 100%;
+    padding: 3rem 0;
     background-color: $whiteClr;
 }
 
@@ -30,6 +31,7 @@ $tablet-size: 768px;
     text-align: center;
     display: grid;
     place-items: center;
+    padding: 2rem 0;
     
 
     .title {
@@ -39,31 +41,45 @@ $tablet-size: 768px;
     p {
         color: $skill-title-txt-clr;
         font-size: 18px;
+        padding-bottom: 15px;
     }
 
 
     .project {
         max-height: 784px;
-        max-width: 343px;
+        min-width: 400px;
         text-align: start;
         display: flex;
         border-radius: 5px;
         justify-content: center;
         flex-direction: column;
         box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-        
+
+    @include Tablet-view() {
+        flex-direction: row;
+        max-width: 1152px;
+        max-height: 480px;
+    //    border-radius: 5px;
+    }
+
         .project-img {
-            // max-width: 100%;
+            max-width: 100%;
             min-height: 256px;
-            max-width: 343px;
+            min-width: 400px;
+            @include Tablet-view() {
+                max-width: 576px;
+                max-height: 480px;
+            }
 
         }
 
         .info {
             padding: 0 1rem;
             min-height: 315px;
-
-          
+            max-width: 500px;
+            @include Tablet-view() {
+                padding-left: 1.5rem;
+            }
         
         }
 
@@ -74,6 +90,8 @@ $tablet-size: 768px;
 
         p {
             font-size: 16px;
+            line-height: 1.4;
+            letter-spacing: normal;
         }
     }
 
@@ -82,6 +100,10 @@ $tablet-size: 768px;
         flex-direction: row;
         flex-wrap: wrap;
         gap: 15px;
+
+        @include Tablet-view() {
+            padding-top: 2rem;
+        }
 
 
         span {
@@ -103,6 +125,10 @@ $tablet-size: 768px;
         align-content: center;
         padding: 0 5px;
         column-gap: 15px;
+        @include Tablet-view() {
+            padding-top: 1rem;
+        }
+
         img {
             height: 30px;
             width: 30px;
@@ -125,6 +151,20 @@ $tablet-size: 768px;
         
 
 
+    }
+
+
+    .flip-items {
+        @extend .project;
+        @include Tablet-view() {
+            .project-img {
+                order: 2;
+            }
+
+            .info {
+                order: 1;
+            }
+        }
     }
 
 

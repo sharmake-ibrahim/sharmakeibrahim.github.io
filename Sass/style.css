@@ -72,8 +72,13 @@
 .about-me {
   max-width: 107rem;
   min-width: 375px;
-  max-height: 100%;
+  min-height: 100vh;
   background-color: #F9FAFB;
+}
+@media (min-width: 768px) {
+  .about-me {
+    max-height: 100vh;
+  }
 }
 
 .contact-section {
@@ -180,6 +185,7 @@
 .project-section {
   min-height: 100vh;
   min-width: 100%;
+  padding: 3rem 0;
   background-color: #FFFFFF;
 }
 
@@ -187,6 +193,7 @@
   text-align: center;
   display: grid;
   place-items: center;
+  padding: 2rem 0;
 }
 .project-content .title {
   background-color: #E5E7EB;
@@ -200,10 +207,11 @@
 .project-content p {
   color: #4B5563;
   font-size: 18px;
+  padding-bottom: 15px;
 }
-.project-content .project {
+.project-content .project, .project-content .flip-items {
   max-height: 784px;
-  max-width: 343px;
+  min-width: 400px;
   text-align: start;
   display: flex;
   border-radius: 5px;
@@ -211,26 +219,53 @@
   flex-direction: column;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
 }
-.project-content .project .project-img {
-  min-height: 256px;
-  max-width: 343px;
+@media (min-width: 768px) {
+  .project-content .project, .project-content .flip-items {
+    flex-direction: row;
+    max-width: 1152px;
+    max-height: 480px;
+  }
 }
-.project-content .project .info {
+.project-content .project .project-img, .project-content .flip-items .project-img {
+  max-width: 100%;
+  min-height: 256px;
+  min-width: 400px;
+}
+@media (min-width: 768px) {
+  .project-content .project .project-img, .project-content .flip-items .project-img {
+    max-width: 576px;
+    max-height: 480px;
+  }
+}
+.project-content .project .info, .project-content .flip-items .info {
   padding: 0 1rem;
   min-height: 315px;
+  max-width: 500px;
 }
-.project-content .project h3 {
+@media (min-width: 768px) {
+  .project-content .project .info, .project-content .flip-items .info {
+    padding-left: 1.5rem;
+  }
+}
+.project-content .project h3, .project-content .flip-items h3 {
   color: #111827;
   font-size: 18px;
 }
-.project-content .project p {
+.project-content .project p, .project-content .flip-items p {
   font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: normal;
 }
 .project-content .languages {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 15px;
+}
+@media (min-width: 768px) {
+  .project-content .languages {
+    padding-top: 2rem;
+  }
 }
 .project-content .languages span {
   background-color: #E5E7EB;
@@ -255,6 +290,11 @@
   -moz-column-gap: 15px;
        column-gap: 15px;
 }
+@media (min-width: 768px) {
+  .project-content .resources {
+    padding-top: 1rem;
+  }
+}
 .project-content .resources img {
   height: 30px;
   width: 30px;
@@ -269,6 +309,14 @@
 }
 .project-content .resources a:hover {
   color: #111827;
+}
+@media (min-width: 768px) {
+  .project-content .flip-items .project-img {
+    order: 2;
+  }
+  .project-content .flip-items .info {
+    order: 1;
+  }
 }
 
 .container {

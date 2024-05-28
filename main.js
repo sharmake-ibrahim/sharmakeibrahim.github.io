@@ -10,12 +10,27 @@ const Toggle = ()=> {
 
         menuContainer.addEventListener( "click", ()=>  {
             Ul.classList.toggle('show');
-            // console.log('menu clicked');
-            
+}
 
- })}
+    
+)}
 
 Toggle();
+
+
+
+const UnorderedList = ()=> {
+    const Ul = document.querySelector('ul');
+    const li =  document.querySelectorAll('ul li')
+    li.forEach( (link)=>{
+        link.addEventListener('click', ()=> {
+        Ul.classList.remove('show');
+        })
+    })
+}
+
+UnorderedList()
+
 
 
 
@@ -30,7 +45,7 @@ const CopyAndPaste = () => {
             try {
                 const content = document.querySelector('.contact-info h1').textContent;
                 await navigator.clipboard.writeText(content);
-                 
+                
                 const copiedTxt = await navigator.clipboard.readText();
                 console.log(copiedTxt)
                 
