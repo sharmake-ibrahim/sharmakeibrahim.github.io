@@ -41,6 +41,7 @@
 .about-me-content .split img {
   max-height: 400px;
   max-width: 500px;
+  border-radius: 3px;
 }
 .about-me-content .space-text {
   row-gap: 15px;
@@ -335,12 +336,15 @@
   padding: 0 0;
   max-width: 107rem;
   min-width: 375px;
-  max-height: 100vh;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 @media (min-width: 768px) {
   .hero-section {
     padding: 1em 0;
+    min-height: 0;
     max-height: 100vh;
+    border: red;
   }
 }
 .hero-section .split {
@@ -407,9 +411,9 @@
   }
 }
 .hero-section .split .hero-img img {
-  height: 300px;
-  width: 320px;
-  border-radius: 50%;
+  min-height: 450px;
+  max-width: 320px;
+  border-radius: 3px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -433,6 +437,10 @@
   height: 60px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.hero-section .tech-stack img:hover {
+  scale: 1.2;
+  transition: ease-out;
 }
 .hero-section .tech-stack p {
   color: #4B5563;
