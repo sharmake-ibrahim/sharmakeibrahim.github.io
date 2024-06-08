@@ -3,14 +3,14 @@
 const Toggle = ()=> {
     const menuContainer = document.querySelector('.menu-container');
     const closeMenu = document.querySelector('.close-menu');
-    const openMenu = document.querySelector('.open-menu')
     const Ul = document.querySelector('ul');
 
-    openMenu.classList.add('hidden');
+   
 
         menuContainer.addEventListener( "click", ()=>  {
             Ul.classList.toggle('show');
-}
+            
+}       
 
     
 )}
