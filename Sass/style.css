@@ -414,8 +414,6 @@
   min-height: 450px;
   max-width: 320px;
   border-radius: 3px;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .hero-section .tech-stack {
   margin-top: 1em;
