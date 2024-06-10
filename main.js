@@ -1,14 +1,14 @@
 
 
 const Toggle = ()=> {
-    const menuContainer = document.querySelector('.menu-container');
-    const closeMenu = document.querySelector('.close-menu');
+    var hamburger = document.querySelector('.hamburger-menu');
     const Ul = document.querySelector('ul');
 
    
 
-        menuContainer.addEventListener( "click", ()=>  {
+        hamburger.addEventListener( "click", ()=>  {
             Ul.classList.toggle('show');
+            hamburger.classList.toggle('active');
             
 }       
 
@@ -25,6 +25,7 @@ const UnorderedList = ()=> {
     li.forEach( (link)=>{
         link.addEventListener('click', ()=> {
         Ul.classList.remove('show');
+        hamburger.classList.remove("active");
         })
     })
 }
