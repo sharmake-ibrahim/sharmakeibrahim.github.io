@@ -10,13 +10,7 @@ const Toggle = ()=> {
             Ul.classList.toggle('show');
             hamburger.classList.toggle('active');
             
-}       
-
-    
-)}
-
-Toggle();
-
+})
 
 
 const UnorderedList = ()=> {
@@ -31,6 +25,19 @@ const UnorderedList = ()=> {
 }
 
 UnorderedList()
+
+
+
+
+
+
+}
+
+Toggle();
+
+
+
+
 
 
 
