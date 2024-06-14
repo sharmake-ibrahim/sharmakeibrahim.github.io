@@ -135,34 +135,34 @@ header {
 
 
 
-.them {
-    // border-left: 1px solid $skill-title-txt-clr;
-    border-left-width: 5px;
-    border-width: 1px;
-    // margin-left: 20px;
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    column-gap: 8px;
+// .them {
+//     // border-left: 1px solid $skill-title-txt-clr;
+//     border-left-width: 5px;
+//     border-width: 1px;
+//     // margin-left: 20px;
+//     display: flex;
+//     align-items: center;
+//     width: fit-content;
+//     column-gap: 8px;
 
    
-    .dark-mode {
-        display: none;
-    }
+//     .dark-mode {
+//         display: none;
+//     }
 
-    p {
-        display: none;
-        @include Tablet-screen() {
-            display: block;
-        }
+//     p {
+//         display: none;
+//         @include Tablet-screen() {
+//             display: block;
+//         }
     
         
-    };
+//     };
 
 
  
 
-}
+// }
 
 
 
