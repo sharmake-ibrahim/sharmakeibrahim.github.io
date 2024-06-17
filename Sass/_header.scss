@@ -8,11 +8,11 @@ $tablet-view: 768px;
     }
 }
 header {
-    // max-height: 100px;
-    // min-width: 100%;
-    // background-color: $whiteClr;
-    // display: flex;
-    // justify-content: space-between;
+    max-height: 100px;
+    max-width: 100%;
+    background-color: $whiteClr;
+    
+  
 
     .show {
         display: block;

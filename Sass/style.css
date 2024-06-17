@@ -9,6 +9,18 @@
   }
 }
 
+.about-me {
+  min-width: 100%;
+  min-height: 100vh;
+  background-color: #F9FAFB;
+}
+@media (min-width: 768px) {
+  .about-me {
+    min-height: 700px;
+    min-width: 100%;
+  }
+}
+
 .about-me-content {
   display: grid;
   padding: 20px 0;
@@ -28,7 +40,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  align-content: center;
   padding: 2rem 0;
   row-gap: 1em;
 }
@@ -68,18 +79,6 @@
 .about-me-content article h1 {
   color: #111827;
   font-size: minmax(24px, 30px);
-}
-
-.about-me {
-  max-width: 107rem;
-  min-width: 375px;
-  min-height: 100vh;
-  background-color: #F9FAFB;
-}
-@media (min-width: 768px) {
-  .about-me {
-    max-height: 100vh;
-  }
 }
 
 .contact-section {
@@ -210,63 +209,35 @@
   font-size: 18px;
   padding-bottom: 15px;
 }
-.project-content .project, .project-content .flip-items {
-  max-height: 784px;
-  min-width: 400px;
+.project-content .project {
+  max-height: 772px;
+  max-width: 343px;
   text-align: start;
   display: flex;
-  border-radius: 5px;
   justify-content: center;
   flex-direction: column;
+  border-radius: 5px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 }
-@media (min-width: 768px) {
-  .project-content .project, .project-content .flip-items {
-    flex-direction: row;
-    max-width: 1152px;
-    max-height: 480px;
-  }
-}
-.project-content .project .project-img, .project-content .flip-items .project-img {
-  max-width: 100%;
-  min-height: 256px;
-  min-width: 400px;
-}
-@media (min-width: 768px) {
-  .project-content .project .project-img, .project-content .flip-items .project-img {
-    max-width: 576px;
-    max-height: 480px;
-  }
-}
-.project-content .project .info, .project-content .flip-items .info {
-  padding: 0 1rem;
-  min-height: 315px;
-  max-width: 500px;
-}
-@media (min-width: 768px) {
-  .project-content .project .info, .project-content .flip-items .info {
-    padding-left: 1.5rem;
-  }
-}
-.project-content .project h3, .project-content .flip-items h3 {
+.project-content .project h3 {
   color: #111827;
   font-size: 18px;
 }
-.project-content .project p, .project-content .flip-items p {
+.project-content .project p {
   font-size: 16px;
   line-height: 1.4;
   letter-spacing: normal;
+}
+@media (min-width: 768px) {
+  .project-content .project p {
+    font-size: 0.8rem;
+  }
 }
 .project-content .languages {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 15px;
-}
-@media (min-width: 768px) {
-  .project-content .languages {
-    padding-top: 2rem;
-  }
 }
 .project-content .languages span {
   background-color: #E5E7EB;
@@ -278,10 +249,20 @@
   font-size: 14px;
 }
 .project-content .my-projects {
-  display: flex;
+  display: grid;
   justify-content: center;
-  flex-direction: column;
   row-gap: 2rem;
+}
+@media (min-width: 768px) {
+  .project-content .my-projects {
+    min-height: 100vh;
+    max-width: 1152px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, minmax(350px, 1fr));
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+  }
 }
 .project-content .resources {
   display: flex;
@@ -293,7 +274,7 @@
 }
 @media (min-width: 768px) {
   .project-content .resources {
-    padding-top: 1rem;
+    padding-top: 15px;
   }
 }
 .project-content .resources img {
@@ -311,13 +292,31 @@
 .project-content .resources a:hover {
   color: #111827;
 }
-@media (min-width: 768px) {
-  .project-content .flip-items .project-img {
-    order: 2;
-  }
-  .project-content .flip-items .info {
-    order: 1;
-  }
+
+.img {
+  max-height: 256px;
+  max-width: 343px;
+  background-color: #F9FAFB;
+  border-radius: 5px 5px 0 0;
+  display: grid;
+  justify-content: center;
+  place-items: center;
+  padding: 15px;
+}
+.img img {
+  max-width: 100%;
+  height: 192px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 279px;
+  border-radius: 15px 5px;
+}
+
+.info {
+  max-height: 516px;
+  max-width: 343px;
+  display: block;
+  padding: 0 15px;
 }
 
 .container {
@@ -467,6 +466,11 @@
   }
 }
 
+header {
+  max-height: 100px;
+  max-width: 100%;
+  background-color: #FFFFFF;
+}
 header .show {
   display: block;
 }
@@ -569,4 +573,6 @@ header a {
 .main-container {
   min-height: 100vh;
   min-width: 100%;
+  display: grid;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */
