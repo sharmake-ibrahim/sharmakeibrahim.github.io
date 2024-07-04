@@ -10,9 +10,9 @@
 }
 
 .about-me {
-  min-width: 100%;
+  max-width: 100%;
   min-height: 100vh;
-  background-color: #F9FAFB;
+  background-color: #FFFFFF;
 }
 @media (min-width: 768px) {
   .about-me {
@@ -459,10 +459,9 @@
   .hero-section .tech-stack .languages {
     display: grid;
     margin-left: 2em;
-    -moz-column-gap: 15px;
-         column-gap: 15px;
+    gap: 15px 15px;
     place-items: center;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 
@@ -570,9 +569,14 @@ header a {
   }
 }
 
-.main-container {
-  min-height: 100vh;
-  min-width: 100%;
-  display: grid;
-  justify-content: center;
+nav ul li a.active {
+  font-weight: bold;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+nav ul li a.active {
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */

@@ -19,9 +19,9 @@ $tablet-size: 768px;
 }
 
 .about-me{
-    min-width: 100%;
+    max-width: 100%;
     min-height: 100vh;
-    background-color: $Project-box-img;
+    background-color: $Skills-section-main-clr;
     @include Tablet-view() {
      min-height: 700px;
     min-width: 100%;

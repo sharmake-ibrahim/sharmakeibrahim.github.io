@@ -67,3 +67,28 @@ const CopyAndPaste = () => {
 }
 
 CopyAndPaste()
+
+
+
+
+const NavigateLinks = ()=> {
+    const navLinks = document.querySelectorAll(' li a');
+    const sections = document.querySelectorAll('section');
+        let currentSection = "home";
+        Window.addEventListener("scroll", ()=> {
+
+            sections.forEach( (section)=> {
+                window.scrollY >= section.offsetTop ?  currentSection = section.id : ""
+
+            })
+        })
+
+    navLinks.forEach( (link)=> {
+        if(  link.href.includes(currentSection)) {
+            document.querySelector('.active').classList.remove("active");
+            navLinks.classList.add("active")
+        }
+    })
+}
+
+NavigateLinks();
