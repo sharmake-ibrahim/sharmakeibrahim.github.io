@@ -264,11 +264,10 @@
   .project-content .my-projects {
     min-height: 100vh;
     max-width: 1152px;
-    display: grid;
-    place-items: center;
-    grid-template-columns: repeat(2, minmax(350px, 1fr));
     -moz-column-gap: 2rem;
          column-gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 .project-content .resources {
