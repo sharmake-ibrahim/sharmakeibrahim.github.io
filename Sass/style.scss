@@ -8,13 +8,11 @@
 @import "./footer";
 
 
-// .main-container {
-//     min-height: 100vh;
-//     m-width: 100%;
-//     display: grid;
-//     scroll-behavior: smooth;
-//     justify-content: center;
-// }
+.main-container {
+    min-height: 100vh;
+    min-width: 100%;
+
+}
 
 html {
     scroll-behavior: smooth;

@@ -46,6 +46,7 @@ $desktop-size: 1024px;
 
     p {
         color: $skill-title-txt-clr;
+        padding: 1rem 0;
         font-size: 18px;
         padding-bottom: 15px;
     }
@@ -53,7 +54,8 @@ $desktop-size: 1024px;
 
     .project {
                 max-height: 772px;
-                max-width: 343px;
+                min-width: 343px;
+                max-width: 370px;
                 text-align: start;
                 display: flex;
                 justify-content: center;
@@ -92,7 +94,9 @@ $desktop-size: 1024px;
     .my-projects {
         display: grid;
         justify-content: center;
+        place-items: center;
         row-gap: 2rem;
+        padding: 3rem 0;
 
         @include Tablet-view()  {
             min-height: 100vh;
