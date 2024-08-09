@@ -31,6 +31,7 @@ $tablet-size: 768px;
     text-align: center;
     display: grid;
     place-items: center;
+    padding: 1.5rem 0;
 
     .content-title {
         @include reuseableTittle();
@@ -44,6 +45,8 @@ $tablet-size: 768px;
 p {
     color: $skill-title-txt-clr;
     font-size: 20px;
+    padding: 10px 0;
+    line-height: 1.3;
 }
 
 }
