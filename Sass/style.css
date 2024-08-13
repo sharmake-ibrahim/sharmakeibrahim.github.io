@@ -10,13 +10,16 @@
 }
 
 .about-me {
-  max-width: 100%;
   min-height: 100vh;
+  max-width: 100%;
   background-color: #FFFFFF;
+  display: grid;
+  justify-content: center;
+  padding: 3.5rem 0;
 }
 @media (min-width: 768px) {
   .about-me {
-    min-height: 700px;
+    max-height: 100vh;
     min-width: 100%;
   }
 }
@@ -54,12 +57,17 @@
   max-width: 500px;
   border-radius: 3px;
 }
+.about-me-content .split img:hover {
+  filter: drop-shadow(0 25px 25px #C4E1FF);
+  transition: ease-in-out;
+}
 .about-me-content .space-text {
   row-gap: 15px;
   font-size: 16px;
   line-height: 1.2;
   color: #4B5563;
   text-align: center;
+  padding-bottom: 10px;
 }
 @media (min-width: 768px) {
   .about-me-content .space-text {
@@ -69,7 +77,9 @@
 .about-me-content article {
   max-height: 400px;
   max-width: 500px;
+  line-height: 1.3;
   text-align: center;
+  text-align: justify;
 }
 @media (min-width: 768px) {
   .about-me-content article {
@@ -189,6 +199,8 @@
   min-height: 100vh;
   min-width: 100%;
   padding: 3rem 0;
+  display: grid;
+  justify-content: center;
   background-color: #FFFFFF;
 }
 
@@ -224,6 +236,10 @@
   border-radius: 5px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 }
+.project-content .project:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transition: ease-in-out;
+}
 .project-content .project h3 {
   color: #111827;
   font-size: 18px;
@@ -256,18 +272,20 @@
 .project-content .my-projects {
   display: grid;
   justify-content: center;
-  place-items: center;
+  grid-template-columns: 100%;
+  place-content: center;
   row-gap: 2rem;
   padding: 3rem 0;
 }
 @media (min-width: 768px) {
   .project-content .my-projects {
-    min-height: 100vh;
+    max-height: 100vh;
     max-width: 1152px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     -moz-column-gap: 2rem;
          column-gap: 2rem;
-    display: flex;
-    flex-wrap: wrap;
   }
 }
 .project-content .resources {
@@ -415,11 +433,17 @@
   .hero-section .split .hero-img {
     grid-area: img;
   }
+  .hero-section .split .hero-img:hover {
+    filter: drop-shadow(0 25px 25px rgba(0, 0, 0, 0.15));
+    transition: ease-in-out;
+  }
 }
 .hero-section .split .hero-img img {
   min-height: 450px;
   max-width: 320px;
   border-radius: 3px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .hero-section .tech-stack {
   margin-top: 1em;
@@ -609,6 +633,9 @@ footer h6 {
 .main-container {
   min-height: 100vh;
   min-width: 100%;
+  display: block;
+  justify-content: center;
+  align-items: center;
 }
 
 html {

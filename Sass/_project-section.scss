@@ -28,6 +28,8 @@ $desktop-size: 1024px;
     min-height: 100vh;
     min-width: 100%;
     padding: 3rem 0;
+    display: grid;
+    justify-content: center;
     background-color: $whiteClr;
 
 }
@@ -62,6 +64,10 @@ $desktop-size: 1024px;
                 flex-direction: column;
                 border-radius: 5px;
                 box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+                &:hover {
+                    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+                    transition: ease-in-out;
+                }
         
         h3 {
             color: $project-title-clr;
@@ -94,19 +100,21 @@ $desktop-size: 1024px;
     .my-projects {
         display: grid;
         justify-content: center;
-        place-items: center;
+        grid-template-columns: 100%;
+        place-content: center;
         row-gap: 2rem;
         padding: 3rem 0;
 
+
         @include Tablet-view()  {
-            min-height: 100vh;
+            max-height: 100vh;
             max-width: 1152px;
-            //  display: grid;
-            //  place-items: center;
-            // grid-template-columns: repeat(3, minmax(350px, 1fr));
+             display: flex;
+             flex-direction: row;
+             flex-wrap: wrap;
             column-gap: 2rem;
-            display: flex;
-            flex-wrap: wrap;
+            // display: flex;
+            // flex-wrap: wrap;
         }
 
 

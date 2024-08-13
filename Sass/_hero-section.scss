@@ -115,6 +115,10 @@ $tablet-size: 768px;
             grid-area: img;
             // max-height: 360px;
             // max-width: 320px;
+            &:hover {
+                filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+                transition: ease-in-out;
+            }
         }
     
     
@@ -123,7 +127,11 @@ $tablet-size: 768px;
             min-height: 450px;
             max-width: 320px;
             border-radius: 3px;
-            // object-fit: cover;
+            object-fit: cover;
+            // &:hover {
+            //     transform: scale(1.1);
+            //     transition: ease-in-out;
+            // }
            
          }
 
