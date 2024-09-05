@@ -186,12 +186,14 @@ $tablet-size: 768px;
 
 
          .languages {
+            padding-top: 1rem;
             @include Tablet-view() {
                 display: grid;
                 margin-left: 2em;
                 gap: 15px 15px;
+                padding: 5px;
                 place-items: center;
-                grid-template-columns: repeat(6, 1fr);
+                grid-template-columns: repeat(7, 1fr);
             }
          }
          
