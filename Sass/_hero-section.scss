@@ -186,7 +186,7 @@ $tablet-size: 768px;
 
 
          .languages {
-            padding-top: 1rem;
+            // padding-top: 1rem;
             @include Tablet-view() {
                 display: grid;
                 margin-left: 2em;

@@ -486,9 +486,6 @@
     border-right: 0.5px solid #4B5563;
   }
 }
-.hero-section .tech-stack .languages {
-  padding-top: 1rem;
-}
 @media (min-width: 768px) {
   .hero-section .tech-stack .languages {
     display: grid;
