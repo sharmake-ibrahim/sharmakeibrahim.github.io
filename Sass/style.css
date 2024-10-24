@@ -10,7 +10,9 @@
 }
 
 .about-me {
-  min-height: 100vh;
+  min-height: 500px;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
   max-width: 100%;
   background-color: #FFFFFF;
   display: grid;
@@ -19,7 +21,9 @@
 }
 @media (min-width: 768px) {
   .about-me {
-    max-height: 100vh;
+    min-height: 600px;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
     min-width: 100%;
   }
 }
@@ -49,7 +53,9 @@
 @media (min-width: 768px) {
   .about-me-content .split {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 400px);
+    -moz-column-gap: 10px;
+         column-gap: 10px;
   }
 }
 .about-me-content .split img {
@@ -76,7 +82,7 @@
 }
 .about-me-content article {
   max-height: 400px;
-  max-width: 500px;
+  max-width: 400px;
   line-height: 1.3;
   text-align: center;
   text-align: justify;
@@ -89,6 +95,11 @@
 .about-me-content article h1 {
   color: #111827;
   font-size: minmax(24px, 30px);
+}
+@media (min-width: 768px) {
+  .about-me-content article h1 {
+    text-align: justify;
+  }
 }
 
 .contact-section {

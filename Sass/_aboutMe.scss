@@ -19,16 +19,17 @@ $tablet-size: 768px;
 }
 
 .about-me{
-    min-height: 100vh;
+    min-height: 500px;
+    max-height: fit-content;
     max-width: 100%;
     background-color: $Skills-section-main-clr;
     display: grid;
     justify-content: center;
     padding: 3.5rem 0;
     @include Tablet-view() {
-     max-height: 100vh;
+     min-height: 600px;
+     max-height: fit-content;
     min-width: 100%;
-    // min-height: fit-content;
 
     }
 
@@ -59,7 +60,8 @@ $tablet-size: 768px;
         @include Tablet-view() {
          
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 400px);
+            column-gap: 10px;
         }
 
         img {
@@ -89,7 +91,7 @@ $tablet-size: 768px;
 
     article {
         max-height: 400px;
-        max-width: 500px;
+        max-width: 400px;
         line-height: 1.3;
         text-align: center;
         text-align: justify;
@@ -100,6 +102,10 @@ $tablet-size: 768px;
         h1 {
             color: $project-title-clr;
             font-size: minmax(24px, 30px);
+
+            @include Tablet-view {
+                text-align: justify;
+            }
         }
     }
 
