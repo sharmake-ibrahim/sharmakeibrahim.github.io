@@ -428,6 +428,16 @@
     place-items: start;
   }
 }
+.hero-section .split .hero-info .list-socials {
+  margin-left: 2rem;
+}
+.hero-section .split .hero-info .list-socials a {
+  text-decoration: none;
+  padding: 0 10px;
+}
+.hero-section .split .hero-info .list-socials a:hover {
+  color: #111827;
+}
 .hero-section .split .hero-info h1 {
   color: #111827;
   font-weight: bold;

@@ -75,6 +75,23 @@ $tablet-size: 768px;
                 
             }
 
+
+            
+.list-socials {
+    margin-left: 2rem;
+    a {
+        text-decoration: none;
+       &:hover {
+        color: $project-title-clr;
+       }
+       padding: 0 10px;
+    }
+
+    
+
+
+}
+
             h1 {
                 color: $project-title-clr;
                 font-weight: bold;
@@ -202,4 +219,5 @@ $tablet-size: 768px;
 
 
 }
+
 
