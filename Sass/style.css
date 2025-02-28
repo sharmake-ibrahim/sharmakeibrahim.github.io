@@ -94,7 +94,7 @@
 }
 .about-me-content article h1 {
   color: #111827;
-  font-size: minmax(24px, 30px);
+  font-size: clamp(1rem, 2vw, 2rem);
 }
 @media (min-width: 768px) {
   .about-me-content article h1 {

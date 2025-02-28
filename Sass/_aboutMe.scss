@@ -86,6 +86,7 @@ $tablet-size: 768px;
             text-align: left;
         }
 
+
     }
 
 
@@ -101,7 +102,7 @@ $tablet-size: 768px;
 
         h1 {
             color: $project-title-clr;
-            font-size: minmax(24px, 30px);
+            font-size: clamp(1rem, 2vw, 2rem);
 
             @include Tablet-view {
                 text-align: justify;
