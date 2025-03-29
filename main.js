@@ -1,4 +1,8 @@
-
+    const display_copyright_year = document.querySelector('.copyright span');
+    const d = new Date();
+   let year = d.getFullYear();
+    display_copyright_year.textContent = year
+       
 
 const Toggle = ()=> {
     var hamburger = document.querySelector('.hamburger-menu');
