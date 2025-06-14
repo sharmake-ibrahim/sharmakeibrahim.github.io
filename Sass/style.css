@@ -377,6 +377,10 @@
   }
 }
 
+.btn-primary a {
+  color: white;
+}
+
 .hero-section {
   background-color: #FFFFFF;
   padding: 0 0;
