@@ -239,6 +239,9 @@
 .project-content .subtitle {
   color: #FFFFFF;
 }
+.project-content .subtitle a {
+  color: #FFFFFF;
+}
 .project-content p {
   padding: 1rem 0;
   font-size: 18px;

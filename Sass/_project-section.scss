@@ -22,6 +22,7 @@ $desktop-size: 1024px;
     }
 }
 
+    
 
 
 .project-section {
@@ -56,6 +57,10 @@ $desktop-size: 1024px;
 
     .subtitle {
         color: $whiteClr;
+
+        a{
+            color: $whiteClr;
+        }
     }
 
     p {
