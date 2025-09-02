@@ -206,6 +206,16 @@
   }
 }
 
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
 .project-section {
   min-height: 100vh;
   min-width: 100%;
@@ -252,6 +262,7 @@
   min-width: 343px;
   max-width: 370px;
   text-align: start;
+  animation: 1.5s fadeInUp;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -447,6 +458,7 @@
   font-weight: bold;
   font-size: clamp(36px, 3vw, 60px);
   padding-bottom: 2.5rem;
+  animation: 1.5s fadeInUp;
 }
 .hero-section .split .narrow-txt {
   margin-top: -1.3em;
@@ -465,6 +477,7 @@
 }
 .hero-section .split .hero-img {
   margin-top: 1rem;
+  animation: 1.5s fadeInUp;
 }
 @media (min-width: 768px) {
   .hero-section .split .hero-img {
@@ -481,6 +494,19 @@
   border-radius: 3px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+.hero-section .fadeInUp-animation {
+  animation: 1.5s fadeInUp;
 }
 .hero-section .tech-stack {
   margin-top: 1em;
@@ -501,13 +527,14 @@
 }
 .hero-section .tech-stack img {
   max-width: 100%;
-  height: 60px;
+  height: 45px;
   -o-object-fit: cover;
      object-fit: cover;
+  animation: 1.5s fadeInUp;
 }
 .hero-section .tech-stack img:hover {
   scale: 1.2;
-  transition: ease-out;
+  transition: 1s ease-in-out;
 }
 .hero-section .tech-stack p {
   color: #4B5563;
@@ -530,7 +557,7 @@
     gap: 15px 15px;
     padding: 5px;
     place-items: center;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(10, 1fr);
   }
 }
 
