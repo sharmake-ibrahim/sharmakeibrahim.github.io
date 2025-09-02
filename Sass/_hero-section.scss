@@ -105,6 +105,7 @@ $tablet-size: 768px;
                 font-weight: bold;
                 font-size: clamp(36px,3vw, 60px );
                 padding-bottom: 2.5rem;
+                 animation: 1.5s fadeInUp;
                 // text-align: center;
                 // clamp(2rem, 4vw, 4rem);
 
@@ -137,6 +138,7 @@ $tablet-size: 768px;
 
         .hero-img {
             margin-top: 1rem;
+              animation: 1.5s fadeInUp;
         @include Tablet-view() {
             grid-area: img;
             // max-height: 360px;
@@ -168,7 +170,20 @@ $tablet-size: 768px;
 
     }
 
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
 
+.fadeInUp-animation {
+  animation: 1.5s fadeInUp;
+}
 
     .tech-stack {
         margin-top: 1em;
@@ -189,11 +204,12 @@ $tablet-size: 768px;
 
          img {
             max-width: 100%;
-            height: 60px;
+            height: 45px;
             object-fit: cover;
+            animation: 1.5s fadeInUp;
             &:hover {
                 scale: 1.2;
-                transition: ease-out;
+                transition:  1s ease-in-out;
             }
 
          }
@@ -219,7 +235,7 @@ $tablet-size: 768px;
                 gap: 15px 15px;
                 padding: 5px;
                 place-items: center;
-                grid-template-columns: repeat(7, 1fr);
+                grid-template-columns: repeat(10, 1fr);
             }
          }
          

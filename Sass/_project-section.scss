@@ -22,7 +22,17 @@ $desktop-size: 1024px;
     }
 }
 
-    
+    @keyframes fadeInUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
 
 
 .project-section {
@@ -76,6 +86,7 @@ $desktop-size: 1024px;
                 min-width: 343px;
                 max-width: 370px;
                 text-align: start;
+                 animation: 1.5s fadeInUp;
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
@@ -193,6 +204,7 @@ $desktop-size: 1024px;
     justify-content: center;
     place-items: center;
     padding: 15px;
+    
 
 
     img {
