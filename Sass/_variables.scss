@@ -1,19 +1,27 @@
-$skill-title-Clr: #E5E7EB;
-$skill-title-txt-clr: #4B5563; 
-$Skills-section-main-clr: #FFFFFF;
-$whiteClr: #FFFFFF;
-$Project-box-img: #F9FAFB;
-$project-title-clr: #111827;
+// $skill-title-Clr: #E5E7EB;
+// $skill-title-txt-clr: #4B5563; 
+// $Skills-section-main-clr: #FFFFFF;
+// $whiteClr: #FFFFFF;
+// $Project-box-img: #F9FAFB;
+// $project-title-clr: #111827;
+$skill-title-Clr: #E5E7EB;        // light gray (good for headings)
+$skill-title-txt-clr: #9CA3AF;    // softer gray for secondary text
 
+$Skills-section-main-clr: #111827; // dark background (main section)
+$whiteClr: #F9FAFB;               // not pure white, easier on eyes
+
+$Project-box-img: #1F2937;        // dark card background
+$project-title-clr: #F3F4F6;      // light text for titles
 
 
 @mixin reuseableTittle {
-    background-color: $skill-title-Clr;
+    background-color: $whiteClr;
     border-radius: 5rem;
     max-width: fit-content;
     padding: 6px 25px;
-    color: $skill-title-txt-clr;
-    font-size: 14px;
+    color: $Skills-section-main-clr;
+    font-size: 1rem;
+    
 }
 
 @mixin ProjecImgBox {

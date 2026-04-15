@@ -42,10 +42,15 @@ $desktop-size: 1024px;
     display: grid;
     justify-content: center;
     // background-color: $whiteClr;
-    background-image: url("../images/stacked-waves-haikei.png");
+    // background-image: url("../images/stacked-waves-haikei.png");
     background-size: cover;
     background-repeat: no-repeat;
-
+    background: $skill-title-txt-clr;
+   
+background: -webkit-linear-gradient(to right,$Project-box-img , $Skills-section-main-clr);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, $Skills-section-main-clr, $Project-box-img); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+-webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
     @include Tablet-view(){
         min-height: 670px;
     }
@@ -67,6 +72,7 @@ $desktop-size: 1024px;
 
     .subtitle {
         color: $whiteClr;
+        max-width: 60rem;
 
         a{
             color: $whiteClr;
@@ -82,7 +88,7 @@ $desktop-size: 1024px;
 
 
     .project {
-                max-height: 772px;
+                height: fit-content;
                 min-width: 343px;
                 max-width: 370px;
                 text-align: start;
@@ -91,17 +97,18 @@ $desktop-size: 1024px;
                 justify-content: center;
                 flex-direction: column;
                 border-radius: 5px;
-                background-color: $whiteClr;
-                box-shadow: 0 10px 15px -3px $whiteClr, $whiteClr;
+                background-color: $Project-box-img;
+                box-shadow: 0 10px 15px -3px $Project-box-img, $Project-box-img;
                 &:hover {
-                    box-shadow: 0 25px 50px -12px $whiteClr;
+                    box-shadow: 0 25px 50px -12px $Skills-section-main-clr;
                     transition: ease-in-out;
                     transition-duration: 0.5s;
                 }
         
         h3 {
-            color: $project-title-clr;
+            color: $whiteClr;
             font-size: 18px;
+            padding: 10px 0;
             
         }
 
@@ -109,6 +116,7 @@ $desktop-size: 1024px;
             font-size: 16px;
             line-height: 1.4;
             letter-spacing: normal;
+            color: $skill-title-txt-clr;
             @include Tablet-view() {
                 font-size: .80rem;
             }
@@ -133,25 +141,21 @@ $desktop-size: 1024px;
         justify-content: center;
         grid-template-columns: 100%;
         place-content: center;
-        row-gap: 2rem;
+        gap: 20px 20px;
         padding: 3rem 0;
 
-
+            
         @include Tablet-view()  {
             min-height: 100vh;
             max-width: 1152px;
-             display: flex;
-             flex-direction: row;
-             flex-wrap: wrap;
-            column-gap: 2rem;
-            // display: flex;
-            // flex-wrap: wrap;
+             display: grid;
+            grid-template-columns: repeat(3, minmax(200px, 1fr));
+            gap: 20px 20px;
         }
 
 
-        // @include Desktop() {
-        //     grid-template-columns: repeat(4, minmax(300px, 1fr));
-        // }
+  
+       
     }
 
 
@@ -196,14 +200,14 @@ $desktop-size: 1024px;
 
 
 .img {
-    max-height: 256px;
+    min-height: 256px;
     max-width: 343px;
-    background-color: $Project-box-img;
     border-radius: 5px 5px 0 0;
     display: grid;
     justify-content: center;
     place-items: center;
     padding: 15px;
+    background-color:$Skills-section-main-clr ;
     
 
 
@@ -220,11 +224,11 @@ $desktop-size: 1024px;
 
 
 .info {
-    max-height: 516px;
+   height: auto;
     max-width: 343px;
     display: block;
     padding: 0 15px;
-    background-color: $whiteClr;
+    // background-color:$Skills-section-main-clr;
     border-radius: 0 0 5px 5px;
 }
 

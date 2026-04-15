@@ -10,7 +10,7 @@ $tablet-view: 768px;
 header {
     max-height: 100px;
     max-width: 100%;
-    background-color: $whiteClr;
+    background-color: $Project-box-img;
     
   
 
@@ -19,14 +19,14 @@ header {
     }
 
     .header-content {
-        background-color: $whiteClr;
+        background-color: $Project-box-img;
         display: flex;
         align-content: center;
         padding: 1em 3rem;
         justify-content: space-between;
 
         .title {
-            color: $project-title-clr;
+            color: $whiteClr;
             font-size: 30px;
             font-weight: bold;
         }
@@ -49,7 +49,7 @@ header {
         max-height: 100px;
         max-width: 600px;
         display: flex;
-        color: $skill-title-txt-clr;
+        color: $Project-box-img;
         justify-content: space-between;
         align-items: center;
     }
@@ -63,7 +63,7 @@ header {
             padding-top: 15px; 
             display: none;
             position: absolute;
-            background-color: $whiteClr;
+            background-color: $Project-box-img;
             max-width: 100%;
             top: 65px;
             left: 0;
@@ -79,9 +79,10 @@ header {
         }
     }
     a {
-        color: $skill-title-txt-clr;
+        color: $whiteClr;
         text-decoration: none;
         cursor: pointer;
+        font-size: 1rem;
     }
 
 
@@ -99,7 +100,7 @@ header {
 
     .bar {
         display: block;
-        background-color: grey;
+        background-color: $whiteClr;
         height: 3px;
         width: 25px;
         margin: 5px auto;

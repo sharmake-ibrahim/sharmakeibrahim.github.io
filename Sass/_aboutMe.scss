@@ -80,11 +80,8 @@ $tablet-size: 768px;
         font-size: 16px;
         line-height: 1.2;
         color: $skill-title-txt-clr;
-        text-align: center;
+        text-align: left;
         padding-bottom: 10px;
-        @include Tablet-view() {
-            text-align: left;
-        }
 
 
     }
@@ -105,7 +102,7 @@ $tablet-size: 768px;
             font-size: clamp(1rem, 2vw, 2rem);
 
             @include Tablet-view {
-                text-align: justify;
+                text-align:left;
             }
         }
     }
