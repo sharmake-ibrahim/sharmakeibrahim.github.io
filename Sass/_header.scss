@@ -52,6 +52,7 @@ header {
         color: $Project-box-img;
         justify-content: space-between;
         align-items: center;
+        z-index: 1;
     }
 
     ul {
@@ -68,6 +69,7 @@ header {
             top: 65px;
             left: 0;
             right: 0;
+            text-align: center;
             transition: ease-in-out;
         }
     }

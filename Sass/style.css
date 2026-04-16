@@ -611,6 +611,7 @@ header nav {
   color: #1F2937;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
 }
 header ul {
   display: flex;
@@ -629,6 +630,7 @@ header ul {
     top: 65px;
     left: 0;
     right: 0;
+    text-align: center;
     transition: ease-in-out;
   }
 }
