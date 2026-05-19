@@ -409,10 +409,12 @@
 .hero-section {
   background-color: #111827;
   padding: 0 0;
-  max-width: 107rem;
+  max-width: 100%;
   min-width: 375px;
   min-height: 100vh;
   box-sizing: border-box;
+  display: grid;
+  place-items: center;
 }
 @media (min-width: 768px) {
   .hero-section {

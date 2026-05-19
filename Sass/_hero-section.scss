@@ -31,10 +31,12 @@ $tablet-size: 768px;
 .hero-section {
     background-color: $Skills-section-main-clr;
     padding: 0 0;
-    max-width: 107rem;
+    max-width: 100%;
     min-width: 375px;
     min-height: 100vh;
     box-sizing: border-box;
+    display: grid;
+    place-items: center;
     @include Tablet-view() {
         padding: 1em 0;
         min-height: 0;
